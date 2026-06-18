@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
+  --color-navy:  #001b2e;
+  --color-deep:  #294c60;
+  --color-mist:  #adb6c4;
+  --color-cream: #ffefd3;
+  --color-peach: #ffc49b;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #001b2e;
+  --foreground: #ffefd3;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
 }
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar            { width: 6px; }
+::-webkit-scrollbar-track      { background: #001b2e; }
+::-webkit-scrollbar-thumb      { background: #294c60; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover{ background: #ffc49b; }
+
+/* ── Floating blob animations ── */
+@keyframes blobUp {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-55px) rotate(180deg); }
+}
+
+@keyframes blobDrift {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  25%       { transform: translate(28px, -22px) scale(1.04); }
+  50%       { transform: translate(14px, -42px) scale(1.08); }
+  75%       { transform: translate(-18px, -18px) scale(1.04); }
+}
+
+@keyframes blobPulse {
+  0%, 100% { transform: scale(1) rotate(0deg);   opacity: 0.08; }
+  50%       { transform: scale(1.55) rotate(120deg); opacity: 0.22; }
+}
+
+@keyframes blobSway {
+  0%, 100% { transform: translateX(0px)  rotate(0deg); }
+  50%       { transform: translateX(-48px) rotate(-28deg); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50%       { opacity: 0.9; transform: scale(1.5); }
+}
+
+@keyframes throb {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(0.8); opacity: 0.4; }
+}
+
+@keyframes wave {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50%      { transform: scale(1.8); opacity: 0; }
+}
+
+.blob-a  { animation: blobUp    10s ease-in-out infinite; }
+.blob-b  { animation: blobDrift 14s ease-in-out infinite; }
+.blob-c  { animation: blobPulse 17s ease-in-out infinite; }
+.blob-d  { animation: blobSway  11s ease-in-out infinite; }
+.blob-a2 { animation: blobUp    10s ease-in-out infinite 3s; }
+.blob-b2 { animation: blobDrift 14s ease-in-out infinite 5s; }
+.blob-c2 { animation: blobPulse 17s ease-in-out infinite 7s; }
+.blob-d2 { animation: blobSway  11s ease-in-out infinite 2s; }
+.blob-sp { animation: sparkle    4s ease-in-out infinite; }
+.blob-sp2{ animation: sparkle    4s ease-in-out infinite 1.3s; }
+.blob-sp3{ animation: sparkle    4s ease-in-out infinite 2.6s; }
+
+.animate-throb { animation: throb 1.2s ease-in-out infinite; }
+
+.dot-wave {
+  position: relative;
+}
+
+.dot-wave::before,
+.dot-wave::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border: 1px solid #22c55e;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: wave 1.5s ease-out infinite;
+}
+
+.dot-wave::after {
+  animation-delay: 0.5s;
+}
+
