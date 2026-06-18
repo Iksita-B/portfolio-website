@@ -6,77 +6,43 @@ import ProjectCard, { type Project } from "./components/ProjectCard";
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Task Management App",
     description:
-      "Full-stack online store with cart management, secure Stripe payments, real-time inventory tracking, and a rich admin dashboard.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
-    liveUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/alexr/ecommerce",
-    featured: true,
+      "Kanban-style project management tool with drag-and-drop boards, team collaboration, deadline tracking, and notifications.",
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB"],
+    liveUrl: "https://task-management-seven-flax.vercel.app/",
+    githubUrl: "https://github.com/Iksita-B/task-management",
+    featured: false,
   },
   {
     id: 2,
-    title: "AI Chat Assistant",
+    title: "World Bank Dashboard",
     description:
-      "Conversational AI app powered by GPT with persistent multi-session chat history, streaming responses, and markdown rendering.",
-    tags: ["Next.js", "OpenAI", "PostgreSQL", "TypeScript"],
-    liveUrl: "https://aichat.example.com",
-    githubUrl: "https://github.com/alexr/ai-chat",
-    featured: true,
+      "A professional analytics dashboard showcasing World Bank economic data for 211+ countries. Features interactive charts, advanced search filtering, detailed country indicators, and a fully responsive dark-themed interface.",
+    tags: ["React.js", "Recharts", "CSS"],
+    liveUrl: "https://world-bank-dashboard-gilt.vercel.app/",
+    githubUrl: "https://github.com/Iksita-B/world-bank-dashboard",
+    featured: false,
   },
   {
     id: 3,
     title: "Weather Dashboard",
     description:
-      "Real-time weather visualisation with 7-day forecasts, interactive maps, and custom charts covering 50k+ global cities.",
-    tags: ["React", "Chart.js", "OpenWeather API", "CSS"],
-    liveUrl: "https://weather.example.com",
-    githubUrl: "https://github.com/alexr/weather",
+      "Real-time weather visualization with current conditions, forecasts, interactive charts, and a responsive user interface powered by live weather data.",
+    tags: ["React.js", "Chart.js", "CSS"],
+    liveUrl: "https://weather-dashboard-gamma-olive.vercel.app/",
+    githubUrl: "https://github.com/Iksita-B/weather-dashboard",
+    featured: false,
   },
   {
     id: 4,
-    title: "Task Manager Pro",
-    description:
-      "Kanban-style project management tool with drag-and-drop boards, team collaboration, deadline tracking, and notifications.",
-    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    liveUrl: "https://tasks.example.com",
-    githubUrl: "https://github.com/alexr/taskmanager",
-  },
-  {
-    id: 5,
-    title: "Social Media App",
-    description:
-      "Feature-rich social platform with real-time feeds, WebSocket messaging, story uploads, and a followers system at scale.",
-    tags: ["React", "Node.js", "Socket.io", "MongoDB", "AWS S3"],
-    liveUrl: "https://social.example.com",
-    githubUrl: "https://github.com/alexr/social",
-  },
-  {
-    id: 6,
-    title: "Crypto Price Tracker",
-    description:
-      "Live dashboard tracking 500+ coins with portfolio management, price alerts, and historical charts powered by Redis caching.",
-    tags: ["Next.js", "CoinGecko API", "Redis", "Chart.js"],
-    liveUrl: "https://crypto.example.com",
-    githubUrl: "https://github.com/alexr/crypto",
-  },
-  {
-    id: 7,
-    title: "Recipe Finder App",
-    description:
-      "Smart recipe search with ingredient-based filtering, nutritional info, meal planning calendar, and a personal cookbook.",
-    tags: ["React", "Spoonacular API", "TypeScript", "TailwindCSS"],
-    liveUrl: "https://recipes.example.com",
-    githubUrl: "https://github.com/alexr/recipes",
-  },
-  {
-    id: 8,
     title: "Developer Portfolio",
     description:
       "This very portfolio — built with Next.js and Tailwind CSS, featuring a dynamic project showcase and floating animations.",
     tags: ["Next.js", "TailwindCSS", "TypeScript"],
-    liveUrl: "/",
-    githubUrl: "https://github.com/alexr/portfolio",
+    liveUrl: "https://texembourg.in",
+    githubUrl: "https://github.com/Iksita-B/portfolio-website",
+    featured: false,
   },
 ];
 
@@ -240,8 +206,6 @@ export default function Home() {
             </div>
           )}
         </section>
-
-
       </div>
     </main>
   );
