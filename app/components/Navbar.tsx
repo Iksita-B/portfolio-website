@@ -3,9 +3,9 @@
 import { useState } from "react";
 import AboutModal from "./AboutModal";
 
-const WHATSAPP = "1234567890"; // digits only
-const PHONE    = "+1 234 567 890";
-const EMAIL    = "hello@alexrivera.dev";
+const WHATSAPP = "+917339234466";
+const PHONE    = "+917339234466";
+const EMAIL    = "iksita2000@gmail.com";
 
 export default function Navbar() {
   const [aboutOpen, setAboutOpen] = useState(false);
